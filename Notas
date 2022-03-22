@@ -1,0 +1,2 @@
+pip install robotframework-debuglibrary
+pip install --upgrade pip

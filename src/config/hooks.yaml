@@ -1,0 +1,5 @@
+CONFIG:
+  BROWSER:
+    NOME: chrome
+    URL: http://automationpractice.com/index.php
+  TIMEOUT: 15
