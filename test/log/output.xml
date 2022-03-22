@@ -1,108 +1,192 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<robot generator="Robot 4.1.3 (Python 3.10.2 on win32)" generated="20220322 01:50:10.430" rpa="false" schemaversion="2">
+<robot generator="Robot 4.1.3 (Python 3.10.2 on win32)" generated="20220322 04:00:02.615" rpa="false" schemaversion="2">
 <suite id="s1" name="Webautomation" source="C:\Developer\Robot\PrimeControl\Prime-Robot\test\feature\webautomation.robot">
-<test id="s1-t1" name="Cenario: Listar Produtos">
+<test id="s1-t1" name="Cenario: Adicionar cliente">
 <kw name="Abrir sessão" library="hooks" type="SETUP">
 <kw name="Open Browser" library="SeleniumLibrary">
 <arg>url:blank</arg>
 <arg>${CONFIG.BROWSER.NOME}</arg>
 <doc>Opens a new browser instance to the optional ``url``.</doc>
-<msg timestamp="20220322 01:50:11.650" level="INFO">Opening browser 'chrome' to base url 'url:blank'.</msg>
-<status status="PASS" starttime="20220322 01:50:11.647" endtime="20220322 01:50:13.083"/>
+<msg timestamp="20220322 04:00:04.268" level="INFO">Opening browser 'chrome' to base url 'url:blank'.</msg>
+<status status="PASS" starttime="20220322 04:00:04.267" endtime="20220322 04:00:05.777"/>
 </kw>
 <kw name="Go To" library="SeleniumLibrary">
 <arg>${CONFIG.BROWSER.URL}</arg>
 <doc>Navigates the current browser window to the provided ``url``.</doc>
-<msg timestamp="20220322 01:50:13.086" level="INFO">Opening url 'http://automationpractice.com/index.php'</msg>
-<status status="PASS" starttime="20220322 01:50:13.084" endtime="20220322 01:50:21.144"/>
+<msg timestamp="20220322 04:00:05.781" level="INFO">Opening url 'http://automationpractice.com/index.php'</msg>
+<status status="PASS" starttime="20220322 04:00:05.778" endtime="20220322 04:00:14.364"/>
 </kw>
 <kw name="Maximize Browser Window" library="SeleniumLibrary">
 <doc>Maximizes current browser window.</doc>
-<status status="PASS" starttime="20220322 01:50:21.144" endtime="20220322 01:50:21.313"/>
+<status status="PASS" starttime="20220322 04:00:14.364" endtime="20220322 04:00:14.531"/>
 </kw>
-<status status="PASS" starttime="20220322 01:50:11.646" endtime="20220322 01:50:21.313"/>
+<status status="PASS" starttime="20220322 04:00:04.266" endtime="20220322 04:00:14.532"/>
 </kw>
 <kw name="Dado que o cliente esteja na tela home do site" library="kws_webautomotion">
 <kw name="Title Should Be" library="SeleniumLibrary">
 <arg>${HOME.TITLE}</arg>
 <doc>Verifies that the current page title equals ``title``.</doc>
-<msg timestamp="20220322 01:50:21.345" level="INFO">Page title is 'My Store'.</msg>
-<status status="PASS" starttime="20220322 01:50:21.317" endtime="20220322 01:50:21.345"/>
+<msg timestamp="20220322 04:00:14.559" level="INFO">Page title is 'My Store'.</msg>
+<status status="PASS" starttime="20220322 04:00:14.534" endtime="20220322 04:00:14.560"/>
 </kw>
 <kw name="Wait Until Element Is Visible" library="SeleniumLibrary">
 <arg>${HOME.MENU}</arg>
 <doc>Waits until the element ``locator`` is visible.</doc>
-<status status="PASS" starttime="20220322 01:50:21.346" endtime="20220322 01:50:21.425"/>
+<status status="PASS" starttime="20220322 04:00:14.560" endtime="20220322 04:00:14.665"/>
 </kw>
-<status status="PASS" starttime="20220322 01:50:21.316" endtime="20220322 01:50:21.425"/>
+<status status="PASS" starttime="20220322 04:00:14.533" endtime="20220322 04:00:14.666"/>
 </kw>
-<kw name="Quando passar o mouse por cima da categoria &quot;Women&quot;" library="kws_webautomotion">
-<kw name="Mouse Over" library="SeleniumLibrary">
-<arg>//a[@title='Women']</arg>
-<doc>Simulates hovering the mouse over the element ``locator``.</doc>
-<msg timestamp="20220322 01:50:21.427" level="INFO">Simulating Mouse Over on element '//a[@title='Women']'.</msg>
-<status status="PASS" starttime="20220322 01:50:21.427" endtime="20220322 01:50:21.725"/>
-</kw>
-<status status="PASS" starttime="20220322 01:50:21.426" endtime="20220322 01:50:21.725"/>
-</kw>
-<kw name="E Clicar na sub categoria &quot;Summer Dresses&quot;" library="kws_webautomotion">
-<kw name="Wait Until Element Is Visible" library="SeleniumLibrary">
-<arg>//a[@title="Summer Dresses"]</arg>
-<doc>Waits until the element ``locator`` is visible.</doc>
-<status status="PASS" starttime="20220322 01:50:21.727" endtime="20220322 01:50:21.765"/>
-</kw>
+<kw name="Quando Clicar em &quot;Sign in&quot;" library="kws_webautomotion">
 <kw name="Click Element" library="SeleniumLibrary">
-<arg>//a[@title="Summer Dresses"]</arg>
+<arg>//a[@class='login']</arg>
 <doc>Click the element identified by ``locator``.</doc>
-<msg timestamp="20220322 01:50:21.765" level="INFO">Clicking element '//a[@title="Summer Dresses"]'.</msg>
-<status status="PASS" starttime="20220322 01:50:21.765" endtime="20220322 01:50:32.325"/>
+<msg timestamp="20220322 04:00:14.668" level="INFO">Clicking element '//a[@class='login']'.</msg>
+<status status="PASS" starttime="20220322 04:00:14.667" endtime="20220322 04:00:18.107"/>
 </kw>
-<status status="PASS" starttime="20220322 01:50:21.726" endtime="20220322 01:50:32.325"/>
+<status status="PASS" starttime="20220322 04:00:14.666" endtime="20220322 04:00:18.109"/>
 </kw>
-<kw name="Então os produtos da sub-categoria &quot;Summer Dresses&quot; devem ser apresentados com sucesso" library="kws_webautomotion">
+<kw name="E Informar um e-mail válido" library="kws_webautomotion">
+<kw name="Email" library="FakerLibrary">
+<var>${EMAIL}</var>
+<msg timestamp="20220322 04:00:18.117" level="INFO">${EMAIL} = icampos@example.com</msg>
+<status status="PASS" starttime="20220322 04:00:18.117" endtime="20220322 04:00:18.118"/>
+</kw>
 <kw name="Wait Until Element Is Visible" library="SeleniumLibrary">
-<arg>${CAT_DRESSES.MENU}</arg>
+<arg>email_create</arg>
 <doc>Waits until the element ``locator`` is visible.</doc>
-<status status="PASS" starttime="20220322 01:50:32.327" endtime="20220322 01:50:32.366"/>
+<status status="PASS" starttime="20220322 04:00:18.118" endtime="20220322 04:00:19.068"/>
 </kw>
 <kw name="Title Should Be" library="SeleniumLibrary">
-<arg>${CAT_DRESSES.TITLE}</arg>
+<arg>${LOGIN.TITLE}</arg>
 <doc>Verifies that the current page title equals ``title``.</doc>
-<msg timestamp="20220322 01:50:32.372" level="INFO">Page title is 'Summer Dresses - My Store'.</msg>
-<status status="PASS" starttime="20220322 01:50:32.366" endtime="20220322 01:50:32.372"/>
+<msg timestamp="20220322 04:00:19.078" level="INFO">Page title is 'Login - My Store'.</msg>
+<status status="PASS" starttime="20220322 04:00:19.068" endtime="20220322 04:00:19.078"/>
 </kw>
-<status status="PASS" starttime="20220322 01:50:32.326" endtime="20220322 01:50:32.373"/>
+<kw name="Input Text" library="SeleniumLibrary">
+<arg>email_create</arg>
+<arg>${EMAIL}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<msg timestamp="20220322 04:00:19.079" level="INFO">Typing text 'icampos@example.com' into text field 'email_create'.</msg>
+<status status="PASS" starttime="20220322 04:00:19.078" endtime="20220322 04:00:19.322"/>
+</kw>
+<kw name="Log To Console" library="BuiltIn">
+<arg>${EMAIL}</arg>
+<doc>Logs the given message to the console.</doc>
+<status status="PASS" starttime="20220322 04:00:19.323" endtime="20220322 04:00:19.328"/>
+</kw>
+<status status="PASS" starttime="20220322 04:00:18.116" endtime="20220322 04:00:19.329"/>
+</kw>
+<kw name="E Clicar em &quot;Create an account&quot;" library="kws_webautomotion">
+<kw name="Click Element" library="SeleniumLibrary">
+<arg>//button[@name='SubmitCreate']</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<msg timestamp="20220322 04:00:19.331" level="INFO">Clicking element '//button[@name='SubmitCreate']'.</msg>
+<status status="PASS" starttime="20220322 04:00:19.331" endtime="20220322 04:00:19.440"/>
+</kw>
+<status status="PASS" starttime="20220322 04:00:19.330" endtime="20220322 04:00:19.441"/>
+</kw>
+<kw name="E Preencher os dados obrigatórios" library="kws_webautomotion">
+<kw name="First Name" library="FakerLibrary">
+<var>${NAME}</var>
+<msg timestamp="20220322 04:00:19.444" level="INFO">${NAME} = Otávio</msg>
+<status status="PASS" starttime="20220322 04:00:19.444" endtime="20220322 04:00:19.444"/>
+</kw>
+<kw name="Last Name" library="FakerLibrary">
+<var>${LAST_NAME}</var>
+<msg timestamp="20220322 04:00:19.445" level="INFO">${LAST_NAME} = Monteiro</msg>
+<status status="PASS" starttime="20220322 04:00:19.444" endtime="20220322 04:00:19.445"/>
+</kw>
+<kw name="Phone Number" library="FakerLibrary">
+<var>${PHONE_NUMBER}</var>
+<msg timestamp="20220322 04:00:19.445" level="INFO">${PHONE_NUMBER} = (084) 2873 4587</msg>
+<status status="PASS" starttime="20220322 04:00:19.445" endtime="20220322 04:00:19.445"/>
+</kw>
+<kw name="Password" library="FakerLibrary">
+<var>${PASSWORD}</var>
+<doc>Generate a random password of the specified ``length``.</doc>
+<msg timestamp="20220322 04:00:19.446" level="INFO">${PASSWORD} = u3^6X5!dzA</msg>
+<status status="PASS" starttime="20220322 04:00:19.446" endtime="20220322 04:00:19.446"/>
+</kw>
+<kw name="City" library="FakerLibrary">
+<var>${CITY}</var>
+<doc>:example: 'Sashabury'</doc>
+<msg timestamp="20220322 04:00:19.447" level="INFO">${CITY} = Souza das Flores</msg>
+<status status="PASS" starttime="20220322 04:00:19.447" endtime="20220322 04:00:19.447"/>
+</kw>
+<kw name="Title Should Be" library="SeleniumLibrary">
+<arg>${LOGIN.TITLE}</arg>
+<doc>Verifies that the current page title equals ``title``.</doc>
+<msg timestamp="20220322 04:00:19.453" level="INFO">Page title is 'Login - My Store'.</msg>
+<status status="PASS" starttime="20220322 04:00:19.447" endtime="20220322 04:00:19.453"/>
+</kw>
+<kw name="Wait Until Element Is Visible" library="SeleniumLibrary">
+<arg>id_gender1</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" starttime="20220322 04:00:19.454" endtime="20220322 04:00:21.035"/>
+</kw>
+<kw name="Click Element" library="SeleniumLibrary">
+<arg>idgender1</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<msg timestamp="20220322 04:00:21.036" level="INFO">Clicking element 'idgender1'.</msg>
+<msg timestamp="20220322 04:00:21.256" level="INFO" html="true">&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td colspan="3"&gt;&lt;a href="selenium-screenshot-28.png"&gt;&lt;img src="selenium-screenshot-28.png" width="800px"&gt;&lt;/a&gt;</msg>
+<msg timestamp="20220322 04:00:21.267" level="FAIL">Element with locator 'idgender1' not found.</msg>
+<status status="FAIL" starttime="20220322 04:00:21.035" endtime="20220322 04:00:21.267"/>
+</kw>
+<kw name="Input Text" library="SeleniumLibrary">
+<arg>customer_firstname</arg>
+<arg>${NAME}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="NOT RUN" starttime="20220322 04:00:21.268" endtime="20220322 04:00:21.268"/>
+</kw>
+<kw name="Input Text" library="SeleniumLibrary">
+<arg>customer_lastname</arg>
+<arg>${LAST_NAME}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="NOT RUN" starttime="20220322 04:00:21.269" endtime="20220322 04:00:21.269"/>
+</kw>
+<kw name="Input Password" library="SeleniumLibrary">
+<arg>passwd</arg>
+<arg>${PASSWORD}</arg>
+<doc>Types the given password into the text field identified by ``locator``.</doc>
+<status status="NOT RUN" starttime="20220322 04:00:21.269" endtime="20220322 04:00:21.270"/>
+</kw>
+<kw name="Input Text" library="SeleniumLibrary">
+<arg>city</arg>
+<arg>${CITY}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="NOT RUN" starttime="20220322 04:00:21.270" endtime="20220322 04:00:21.270"/>
+</kw>
+<status status="FAIL" starttime="20220322 04:00:19.442" endtime="20220322 04:00:21.271"/>
 </kw>
 <kw name="Fechar sessão" library="hooks" type="TEARDOWN">
 <kw name="Capture Page Screenshot" library="SeleniumLibrary">
 <doc>Takes a screenshot of the current page and embeds it into a log file.</doc>
-<msg timestamp="20220322 01:50:32.670" level="INFO" html="true">&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td colspan="3"&gt;&lt;a href="selenium-screenshot-21.png"&gt;&lt;img src="selenium-screenshot-21.png" width="800px"&gt;&lt;/a&gt;</msg>
-<status status="PASS" starttime="20220322 01:50:32.376" endtime="20220322 01:50:32.670"/>
+<msg timestamp="20220322 04:00:21.497" level="INFO" html="true">&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td colspan="3"&gt;&lt;a href="selenium-screenshot-29.png"&gt;&lt;img src="selenium-screenshot-29.png" width="800px"&gt;&lt;/a&gt;</msg>
+<status status="PASS" starttime="20220322 04:00:21.275" endtime="20220322 04:00:21.497"/>
 </kw>
 <kw name="Close Browser" library="SeleniumLibrary">
 <doc>Closes the current browser.</doc>
-<status status="PASS" starttime="20220322 01:50:32.670" endtime="20220322 01:50:35.147"/>
+<status status="PASS" starttime="20220322 04:00:21.497" endtime="20220322 04:00:24.029"/>
 </kw>
-<status status="PASS" starttime="20220322 01:50:32.375" endtime="20220322 01:50:35.147"/>
+<status status="PASS" starttime="20220322 04:00:21.273" endtime="20220322 04:00:24.029"/>
 </kw>
-<tag>cenario3</tag>
-<status status="PASS" starttime="20220322 01:50:11.645" endtime="20220322 01:50:35.148"/>
+<tag>cenario4</tag>
+<status status="FAIL" starttime="20220322 04:00:04.264" endtime="20220322 04:00:24.030">Element with locator 'idgender1' not found.</status>
 </test>
 <doc>Aqui estarão presentes todos os cenários de automação WEB</doc>
-<status status="PASS" starttime="20220322 01:50:10.433" endtime="20220322 01:50:35.151"/>
+<status status="FAIL" starttime="20220322 04:00:02.622" endtime="20220322 04:00:24.033"/>
 </suite>
 <statistics>
 <total>
-<stat pass="1" fail="0" skip="0">All Tests</stat>
+<stat pass="0" fail="1" skip="0">All Tests</stat>
 </total>
 <tag>
-<stat pass="1" fail="0" skip="0">cenario3</stat>
+<stat pass="0" fail="1" skip="0">cenario4</stat>
 </tag>
 <suite>
-<stat pass="1" fail="0" skip="0" id="s1" name="Webautomation">Webautomation</stat>
+<stat pass="0" fail="1" skip="0" id="s1" name="Webautomation">Webautomation</stat>
 </suite>
 </statistics>
 <errors>
-<msg timestamp="20220322 01:50:11.635" level="ERROR">Error in file 'C:\Developer\Robot\PrimeControl\Prime-Robot\src\auto\elements\home.robot' on line 10: Setting variable '&amp;{CAT_WOMEN}' failed: Invalid dictionary variable item ''. Items must use 'name=value' syntax or be dictionary variables themselves.</msg>
 </errors>
 </robot>

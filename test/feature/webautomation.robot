@@ -24,3 +24,14 @@ Cenario: Listar Produtos
   Quando Passar o mouse por cima da categoria "Women"
   E Clicar na sub categoria "Summer Dresses"
   Então os produtos da sub-categoria "Summer Dresses" devem ser apresentados com sucesso
+
+Cenario: Adicionar cliente
+  [Tags]  cenario4
+  #Debug
+  Dado que o cliente esteja na tela home do site
+  Quando Clicar em "Sign in"
+  E Informar um e-mail válido
+  E Clicar em "Create an account"
+  E Preencher os dados obrigatórios
+  # E Submeter cadastro
+  # Então conferir se o cadastro foi efetuado com sucesso

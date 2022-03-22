@@ -37,6 +37,38 @@ E Clicar na sub categoria "Summer Dresses"
 Então os produtos da sub-categoria "Summer Dresses" devem ser apresentados com sucesso
   Wait Until Element Is Visible  ${CAT_DRESSES.MENU}
   Title Should Be  ${CAT_DRESSES.TITLE}
+  Page Should Contain Image  ${IMG_ITENS.DRESSES}
+
+Quando Clicar em "Sign in"
+  Click Element  //a[@class='login']
+
+E Informar um e-mail válido
+  ${EMAIL} =  FakerLibrary.Email
+  Wait Until Element Is Visible  email_create
+  Title Should Be  ${LOGIN.TITLE}
+  Input Text  email_create  ${EMAIL}
+  Log To Console  ${EMAIL}
+
+E Clicar em "Create an account"
+  Click Element  //button[@name='SubmitCreate']
+
+E Preencher os dados obrigatórios
+  ${NAME} =  FakerLibrary.First Name
+  ${LAST_NAME} =  FakerLibrary.Last Name
+  ${PHONE_NUMBER} =  FakerLibrary.Phone Number
+  ${PASSWORD} =  FakerLibrary.Password
+  ${CITY} =  FakerLibrary.City
+  Title Should Be  ${LOGIN.TITLE}
+  Wait Until Element Is Visible  id_gender1
+  Click Element  idgender1
+  Input Text  customer_firstname  ${NAME}
+  Input Text  customer_lastname  ${LAST_NAME}
+  Input Password  passwd  ${PASSWORD}
+  Input Text  city  ${CITY}
+
+E Submeter cadastro
+
+Então conferir se o cadastro foi efetuado com sucesso
 
 Faker Library teste
   ${cpf}  fakerLibrary.Cpf

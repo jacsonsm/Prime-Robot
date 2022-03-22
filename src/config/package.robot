@@ -11,4 +11,5 @@ Resource        ../auto/elements/busca.robot
 Resource        ../auto/elements/home.robot
 Resource        ../auto/elements/dresses.robot
 Resource        ../auto/elements/t-shirts.robot
+Resource        ../auto/elements/sign-in.robot
 Variables       ../auto/data/busca.yaml

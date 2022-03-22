@@ -5,5 +5,9 @@ Documentation   Mapeamentos dos elementos da tela de busca
 &{BUSCA}
 ...             PRODUTO=//*[@class='price product-price']/ancestor::*[@class='product-image-container']
 #...            IMAGEM_PRODUTO= //img[contains(@alt,'Blouse')]
-...             IMAGEM_PRODUTO=  /img[@src='http://automationpractice.com/img/p/7/7-home_default.jpg']
+...             IMAGEM_PRODUTO= //img[@src='http://automationpractice.com/img/p/7/7-home_default.jpg']
+#
 ${MENSAGEM}=    //p[@class="alert alert-warning"]
+#
+&{IMG_ITENS}
+...             DRESSES=//img[@src='http://automationpractice.com/img/p/2/0/20-home_default.jpg']
