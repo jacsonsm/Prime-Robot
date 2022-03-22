@@ -19,6 +19,7 @@ Cenario: Pesquisando um protudo inexistente
 
 Cenario: Listar Produtos
   [Tags]  cenario3
+  #Debug
   Dado que o cliente esteja na tela home do site
   Quando Passar o mouse por cima da categoria "Women"
   E Clicar na sub categoria "Summer Dresses"

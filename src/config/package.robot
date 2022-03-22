@@ -9,4 +9,6 @@ Variables       hooks.yaml
 Resource        ../auto/keywords/kws_webautomotion.robot
 Resource        ../auto/elements/busca.robot
 Resource        ../auto/elements/home.robot
+Resource        ../auto/elements/dresses.robot
+Resource        ../auto/elements/t-shirts.robot
 Variables       ../auto/data/busca.yaml
