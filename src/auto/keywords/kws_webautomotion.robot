@@ -1,6 +1,7 @@
 *** Settings ***
 Documentation   keywords referente aos testes da tela home do site
 Library         SeleniumLibrary
+Library         FakerLibrary
 
 *** Keywords ***
 Dado que o cliente esteja na tela home do site
@@ -57,14 +58,21 @@ E Preencher os dados obrigatórios
   ${LAST_NAME} =  FakerLibrary.Last Name
   ${PHONE_NUMBER} =  FakerLibrary.Phone Number
   ${PASSWORD} =  FakerLibrary.Password
-  ${CITY} =  FakerLibrary.City
+  #${CITY} =  FakerLibrary.City
   Title Should Be  ${LOGIN.TITLE}
-  Wait Until Element Is Visible  id_gender1
-  Click Element  idgender1
-  Input Text  customer_firstname  ${NAME}
-  Input Text  customer_lastname  ${LAST_NAME}
-  Input Password  passwd  ${PASSWORD}
-  Input Text  city  ${CITY}
+  Wait Until Element Is Visible  //input[@type='radio'][contains(@id,'gender1')]
+  Click Element  //input[@type='radio'][contains(@id,'gender1')]
+  Input Text  //input[@name='customer_firstname']  ${NAME}
+  Input Text  //input[@name='customer_lastname']  ${LAST_NAME}
+  Input Password  //input[@name='passwd']  ${PASSWORD}
+  #Select From List By Value  //input[@name='city']  ${CITY}
+  Select From List By Value  //select[@name='days']  ${DATE.DIA}
+  Select From List By Value  //select[@name='months']  ${DATE.MES}
+  Select From List By Value  //select[@name='years']  ${DATE.ANO}
+  Click Button  //input[@name='newsletter']
+  Click Button  //input[@name='optin']
+  Input Text  //input[@name='firstname']  ${NAME}
+  Input Text  //input[@name='lastname']  ${LAST_NAME}
 
 E Submeter cadastro
 
