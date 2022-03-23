@@ -7,12 +7,14 @@ Test Teardown   Fechar sessão
 *** Test Cases ***
 Cenario: Pesquisando um produto com sucesso
   [Tags]  cenario1
+  #Debug
   Dado que o cliente esteja na tela home do site
   Quando realizar a pesquisa de um produto
   Então o produto deve ser apresentado com sucesso
 
 Cenario: Pesquisando um protudo inexistente
   [Tags]  cenario2
+  #Debug
   Dado que o cliente esteja na tela home do site
   Quando realizar a pesquisa do produto  calça
   Então é apresentado a mensagem  No results were found for your search "calça"
@@ -33,5 +35,5 @@ Cenario: Adicionar cliente
   E Informar um e-mail válido
   E Clicar em "Create an account"
   E Preencher os dados obrigatórios
-  # E Submeter cadastro
-  # Então conferir se o cadastro foi efetuado com sucesso
+  E Submeter cadastro
+  Então conferir se o cadastro foi efetuado com sucesso
