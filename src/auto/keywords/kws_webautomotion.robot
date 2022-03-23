@@ -1,7 +1,6 @@
 *** Settings ***
 Documentation   keywords referente aos testes da tela home do site
-Library         SeleniumLibrary
-Library         FakerLibrary
+Resource        ../../config/package.robot
 
 *** Keywords ***
 Dado que o cliente esteja na tela home do site
@@ -51,16 +50,21 @@ E Informar um e-mail válido
   Log To Console  ${EMAIL}
 
 E Clicar em "Create an account"
-  Click Element  ${USER.create}  #//button[@name='SubmitCreate']
+  Click Element  ${USER.SubmitCreate}  #//button[@name='SubmitCreate']
 
 E Preencher os dados obrigatórios
+  ${NAME}=  FakerLibrary.First Name
+  ${LAST_NAME}=  FakerLibrary.Last Name
+  ${PHONE_NUMBER}=  FakerLibrary.Phone Number
+  ${PASSWORD}=  FakerLibrary.Password
+  ${CITY} =  FakerLibrary.City
+  ${TEXT} =  FakerLibrary.Word
   Title Should Be  ${LOGIN.TITLE}
-  Wait Until Element Is Visible  ${USER.gender1}
-  Click Element  ${USER.gender1}
-  Input Text  ${USER.CUSTOMERNAME}  ${NAME}
+  Wait Until Element Is Visible  ${LOGIN.CHECKPAGE}
+  Click Element  ${MR}
+  Input Text  ${USER.customer_firstname}  ${NAME}
   Input Text  ${USER.customer_lastname}  ${LAST_NAME}
   Input Password  ${USER.passwd}  ${PASSWORD}
-  #Select From List By Value  //input[@name='city']  ${CITY}
   Select From List By Value  ${USER.days}  ${DATE.DIA}
   Select From List By Value  ${USER.months}  ${DATE.MES}
   Select From List By Value  ${USER.years}  ${DATE.ANO}
@@ -74,24 +78,15 @@ E Preencher os dados obrigatórios
   Input Text  ${USER.city}  ${CITY}
   Select From List By Value  ${USER.id_state}  10
   Input Text  ${USER.postcode}  ${POSTAL_CODE}
- ## Select From List By Value  ${USER.id_country}
-  ##Input Text  ${USER.form-control}  ${TEXT}
+# Select From List By Value  ${USER.id_country}
+  Input Text  ${USER.other}  ${TEXT}
   Input Text  ${USER.phone}  ${PHONE_NUMBER}
   Input Text  ${USER.phone_mobile}  ${PHONE_NUMBER}
-  Input Text  ${USER.Email}  ${EMAIL}
+  Input Text  ${USER.alias}  My address
 
-E Submeter cadastro
-  Click Button  //span[contains(.,'Register')]
+ E Submeter cadastro
+  Click Button  ${USER.submitAccount}
 
-Então conferir se o cadastro foi efetuado com sucesso
-  Title Should Be  My account - My Store
-  Wait Until Element Is Visible  xpath=//ul[@class="myaccount-link-list"]//a[@title="Orders"]
-  Page Should Contain Element  xpath=//h1[@class="page-heading"]
-
-Faker Library teste
-  ${cpf}  fakerLibrary.Cpf
-  ${name}  fakerLibrary.Name
-  ${city}  fakerLibrary.City
-  Log To Console  O CPF é: ${cpf}
-  Log To Console  O nome é: ${name}
-  Log To Console  A cidade é: ${city}
+ Então conferir se o cadastro foi efetuado com sucesso
+  Wait Until Page Contains  ${WELCOME}
+  Page Should Contain Element  ${PAGE-HEADING}
