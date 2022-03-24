@@ -24,7 +24,7 @@ O que precisa para realizar os testes?
 ## 🛠️ Ferramentas
 
 Ferramentas utilizadas para criar o projeto.
-```
+
 * [Python](https://www.python.org/) - O interpretador de testes utilizado.
 * [VSCode](https://code.visualstudio.com/) - O IDE de desenvolvimento utilizado.
 * [RobotFramework](https://robotframework.org/) - O framework utilizado.
