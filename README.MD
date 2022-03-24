@@ -12,7 +12,7 @@ manuais de testes.
 
 O que precisa para realizar os testes?
 
-``´´
+```
 
 - Python 3.9.6 ou superior
 - RobotFramework
