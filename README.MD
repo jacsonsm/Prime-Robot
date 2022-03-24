@@ -1,8 +1,8 @@
 # Teste Web com RobotFramework ![robotframework_icon_132027](https://user-images.githubusercontent.com/90788938/138608292-24561c0d-7bc1-4e88-91e3-b74a21a3dab4.png)
 
-## PHA! PROGRAMA PRIME EXPERTS
+## PHA - Prime Hero Academy -  PROGRAMA PRIME EXPERTS
 
-### Automação
+### 📋 Automação
 
 Automação de teste é uma forma de aumentar a produtividade, diminuir custos e
 conseguir níveis de entrega em outra ordem de grandeza se comparado à processos
