@@ -22,7 +22,7 @@ O que precisa para realizar os testes?
 
 ```
 
-## 🛠️ Construído
+## 🛠️ Ferramentas
 
 Ferramentas utilizadas para criar o projeto.
 
